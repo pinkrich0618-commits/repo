@@ -26,6 +26,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
+#include <algorithm>
 using namespace std;
 
 struct Node {
