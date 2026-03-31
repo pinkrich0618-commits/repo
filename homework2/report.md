@@ -99,19 +99,26 @@ Node* deleteNode(Node* root, int key) {
 ```
 int main() {
     srand(time(0));
+    Node* root = NULL;
 
-    for (int n = 100; n <= 10000; n += 100) {
-        Node* root = NULL;
-
-        for (int i = 0; i < n; i++) {
-            root = insert(root, rand());
-        }
-
-        int h = height(root);
-        double ratio = h / log2(n);
-
-        cout << n << " " << ratio << endl;
+    // 插入測試
+    for (int i = 0; i < 10; i++) {
+        int x = rand() % 100;
+        root = insert(root, x);
+        cout << x << " ";
     }
+    cout << endl;
+
+    // 高度
+    cout << "Height: " << height(root) << endl;
+
+    // 刪除測試
+    cout << "Delete a node..." << endl;
+    root = deleteNode(root, root->key);
+
+    cout << "Height after delete: " << height(root) << endl;
+
+    return 0;
 }
 ```
 結果觀察：
