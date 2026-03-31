@@ -23,7 +23,7 @@ Node* insert(Node* root, int key) {
 
 int height(Node* root) {
     if (!root) return 0;
-    return 1 + max(height(root->left), height(root->right));
+    return 1 + max(height(root->left), heigth(root->right));
 }
 Node* findMin(Node* root) {
     while (root->left)
